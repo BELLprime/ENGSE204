@@ -1,18 +1,18 @@
 import java.util.Scanner;
 
-public class LAB1p1 {
+public class LAB1p2 {
     public static void main(String[] args) {
-        
         Scanner input = new Scanner(System.in);
-        // input
+
         System.out.print("Enter x: ");
         int x = input.nextInt();
+        
         System.out.print("Enter y: ");
         int y = input.nextInt();
-        // cal 
-        int result = x + y;
-        System.out.println("The sum of x and y is: " + result);
-        
+
+        int result = x + y ;
+        System.out.print("Result: " + result);
+
         input.close();
     }
 }
