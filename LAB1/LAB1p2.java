@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class LAB1p2 { // for fomula of rectangle is -->  Area = Width * Height 
+public class LAB1p2 { // for formula of rectangle area is -->  Area = Width * Height 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         // Show Heading
