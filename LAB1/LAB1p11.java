@@ -8,28 +8,25 @@ public class LAB1p11 {
             sum += numbers[num];
         }
         return sum ;
-        /* or use 
-         for (int num : numbers) {
-            sum += num;
-        } */
     }
     // --- End of Function ---
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int N ;
+        int n ;
 
         // Input score 
-        System.out.print("Enter N: "); //จำนวนครั้ง
-        N = input.nextInt();
-        int[] Array = new int[N];
+        System.out.print("Enter n: "); //จำนวนครั้ง
+        n = input.nextInt();
+        int[] Array = new int[n];
 
-        for (int i = 0 ; i < N ; i++) {
-            System.out.printf("%s %d%s" ,"Enter Number" , i+1 ,": "  ); 
-            Array[i] = input.nextInt();
+        int[] array = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter Number " + (i + 1) + ": ");
+            array[i] = input.nextInt();
         }
 
-        // Process calling function
+        // calling function
         int result = sumArray(Array);
 
         // Output
