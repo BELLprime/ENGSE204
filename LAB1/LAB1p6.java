@@ -1,4 +1,3 @@
-/*จงเขียนโปรแกรมภาษา Java เพื่อรับค่าจำนวนเต็ม 1 จำนวน (แม่สูตรคูณ) จากผู้ใช้ จากนั้นให้แสดงผลลัพธ์ของสูตรคูณแม่นั้น ตั้งแต่ 1 ถึง 12 โดยแสดงผลลัพธ์ในรูปแบบ [แม่สูตรคูณ] x [ตัวคูณ] = [ผลลัพธ์] */
 import java.util.Scanner;
 
 public class LAB1p6 {
@@ -6,7 +5,7 @@ public class LAB1p6 {
         Scanner input = new Scanner(System.in);
         
         // Input score 
-        System.out.print("Enter number table: ");
+        System.out.print("Enter number: ");
         int Number = input.nextInt();
 
         // Process
