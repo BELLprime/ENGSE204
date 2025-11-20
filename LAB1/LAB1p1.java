@@ -10,7 +10,8 @@ public class LAB1p1 {
         System.out.print("Enter y: ");
         int y = input.nextInt();
 
-        System.out.println(x + y);
+        int result = x + y ;
+        System.out.print("Result: " + result);
 
         input.close();
     }
