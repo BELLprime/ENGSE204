@@ -2,24 +2,26 @@ import java.util.Scanner;
 
 public class LAB1p3 {
     public static void main(String[] args) {
-        // Scanner
         Scanner input = new Scanner(System.in);
 
         // Input
         System.out.print("Enter number: "); 
-        int num = input.nextInt();
+        if (input.hasNextInt()) {   // ตรวจสอบว่า input ว่าเป็น int ไหม?
+            int x = input.nextInt();
 
-        // show reult
-        System.out.print("Output: "); 
-        // process
-        // (num % 2 == 0) check if true it's Even
-        if (num % 2 == 0) {
-            System.out.print("Even");
+            // Output
+            System.out.print("Result: "); 
+            // Process:
+            if (x % 2 == 0) {
+                System.out.println("Even");
+            } else {
+                System.out.println("Odd");
+            }
+        } else {
+            System.out.println("Invalid input,Please enter an integer only.");
         }
-        else {
-            System.out.print("Odd");
-        }
-        // close scanner 
+
+        // Close scanner
         input.close();
     }
 }
