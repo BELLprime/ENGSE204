@@ -22,43 +22,52 @@ public class LAB1p14 {
             }
         }  
         System.out.print("Enter target(row , column): ") ; // -----เก็บ target--------
-        int TR = input.nextInt() ;
-        int TC = input.nextInt() ; // --------------------------------------------------------
+        int Rtarget = input.nextInt() ;
+        int Ctarget = input.nextInt() ; // --------------------------------------------------------
         
-        // Process and Show screen
-        //-----เจอ mine --------
-        boolean isMine = false;
+        boolean isFound = false ;
 
-        // check, is target over MAP? 
-        if (TR >= 0 && TR < R && TC >= 0 && TC < C) {
-            if (dashboard[TR][TC] == '*') {
-                isMine = true;
+        for (int i = 0; i < dashboard.length; i++) {
+            for (int j = 0; j < dashboard[i].length ; j++) {
+                if (Rtarget == i && Ctarget == j && dashboard[i][j] == '*') {
+                    isFound = true ;
+                    System.out.println("Mine!");
+
+                }
             }
         }
 
-        if (isMine) {
-            System.out.println("Mine");
-        } else { //count mine near by.
-            count = 0;
-           /* Index (i),DR (แถว),DC (คอลัมน์),ทิศทาง (เทียบกับจุดตรงกลาง)
-                0           -1 (ขึ้น)     -1 (ซ้าย)         ,บนซ้าย       
-                1           -1 (ขึ้น)     0 (กลาง)         ,บนกลาง        
-                2           -1 (ขึ้น)     1 (ขวา)          ,บนขวา         * * *   1 2 3 
-                3           0 (กลาง)    -1 (ซ้าย)         ,ซ้าย           * x *   4 x 5
-                4           0 (กลาง)    1 (ขวา)          ,ขวา            * * *   6 7 8
-                5           1 (ลง)      -1 (ซ้าย)         ,ล่างซ้าย
-                6           1 (ลง)      0 (กลาง)         ,ล่างกลาง
-                7           1 (ลง)      1 (ขวา)          ,างขวา*/
-            int[ ] directROW = {-1 , -1 , -1 ,  0 , 0 ,  1 , 1 , 1 } ;
-            int[ ] directCOL = {-1 ,  0 ,  1 , -1 , 1 , -1 , 0 , 1 } ;
-
-            for (int i = 0 ; i < 8 ; i++)  { // chek 8 ทิศรอบตัว
-                int nextR = TR + directROW[ i ] ;
-                int nextC = TC + directCOL[ i ] ;
-
-                if ( nextR >= 0 && nextR < R && nextC >= 0 && nextC < C ) {
-                    if (dashboard[ nextR ] [ nextC ] == '*') {
-                        count++;
+        if (!isFound) {
+            if ( Rtarget >= 1 && Ctarget >= 1 ) {
+                for (int i = Rtarget - 1; i < R; i++) {
+                    for (int j = Ctarget - 1; j < C; j++) {
+                        if (dashboard[i][j] == '*') {
+                            count++;
+                        } 
+                    }
+                }
+            } else if ( Rtarget == 0 && Ctarget >= 1 ) {
+                for (int i = Rtarget; i < R; i++) {
+                    for (int j = Ctarget - 1; j < C; j++) {
+                        if (dashboard[i][j] == '*') {
+                            count++;
+                        }
+                    }
+                }
+            } else if ( Rtarget >= 1 && Ctarget == 0 ) {
+                for (int i = Rtarget - 1; i < R; i++) {
+                    for (int j = Ctarget; j < C; j++) {
+                        if (dashboard[i][j] == '*') {
+                            count++;
+                        }
+                    }
+                }
+            } else if (Rtarget == 0 && Ctarget == 0) {
+                for (int i = Rtarget; i < R; i++) {
+                    for (int j = Ctarget; j < C; j++) {
+                        if (dashboard[i][j] == '*') {
+                            count++;
+                        }
                     }
                 }
             }
