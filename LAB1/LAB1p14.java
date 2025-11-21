@@ -4,72 +4,75 @@ public class LAB1p14 {
     public static void main (String[] args) {
         Scanner input = new Scanner(System.in) ;
 
-        int R , C ;
-        int count = 0 ;
+        int Row , Col ;
+        int bomb = 0 ;
 
         // Input
-        System.out.print("Enter rows: ");
-        R = input.nextInt();
-        System.out.print("Enter columns: ");
-        C = input.nextInt();
-        System.out.println("----- MAP " + R + "x" + C + " -----" );
-        char[][] dashboard =  new char[R][C] ;
+        System.out.print("Enter (rows,columns): ");
+        Row = input.nextInt();
+        Col = input.nextInt();
+        System.out.println("----- MAP " + Row + "x" + Col + " -----" );
+        char[][] dashboard =  new char[Row][Col] ;
 
         // Input MAP and target
         for ( int i = 0 ; i < dashboard.length ; i ++ ) { // rows
             for ( int j = 0 ; j < dashboard[i].length ; j++  ) {  // column
-                    dashboard[i][j] = input.next().charAt(0); // .charAt(0) คือ การเอาแค่ช่องแรก hello --> "h"
+                    dashboard[i][j] = input.next().charAt(0); 
             }
         }  
         System.out.print("Enter target(row , column): ") ; // -----เก็บ target--------
-        int TR = input.nextInt() ;
-        int TC = input.nextInt() ; // --------------------------------------------------------
+        int TRow = input.nextInt() ;
+        int TCol = input.nextInt() ; // --------------------------------------------------------
         
         // Process and Show screen
-        //-----เจอ mine --------
-        boolean isMine = false;
+        boolean Minebomb = false;
 
         // check, is target over MAP? 
-        if (TR >= 0 && TR < R && TC >= 0 && TC < C) {
-            if (dashboard[TR][TC] == '*') {
-                isMine = true;
+        if (TRow >= 0 && TRow < Row && TCol >= 0 && TCol < Col) {
+            if (dashboard[ TRow ][ TCol ] == '*') {
+                Minebomb = true ;
             }
         }
-
-        if (isMine) {
+        if (Minebomb) {
             System.out.println("Mine");
-        } else { //count mine near by.
-            count = 0;
-           /* Index (i),DR (แถว),DC (คอลัมน์),ทิศทาง (เทียบกับจุดตรงกลาง)
-                0           -1 (ขึ้น)     -1 (ซ้าย)         ,บนซ้าย
-                1           -1 (ขึ้น)     0 (กลาง)         ,บนกลาง
-                2           -1 (ขึ้น)     1 (ขวา)          ,บนขวา
-                3           0 (กลาง)    -1 (ซ้าย)         ,ซ้าย
-                4           0 (กลาง)    1 (ขวา)          ,ขวา
-                0           -1 (ขึ้น)     -1 (ซ้าย)         ,บนซ้าย       
-                1           -1 (ขึ้น)     0 (กลาง)         ,บนกลาง        
-                2           -1 (ขึ้น)     1 (ขวา)          ,บนขวา         * * *   1 2 3 
-                3           0 (กลาง)    -1 (ซ้าย)         ,ซ้าย           * x *   4 x 5
-                4           0 (กลาง)    1 (ขวา)          ,ขวา            * * *   6 7 8
-                5           1 (ลง)      -1 (ซ้าย)         ,ล่างซ้าย
-                6           1 (ลง)      0 (กลาง)         ,ล่างกลาง
-                7           1 (ลง)      1 (ขวา)          ,างขวา*/
-            int[ ] directROW = {-1 , -1 , -1 ,  0 , 0 ,  1 , 1 , 1 } ;
-            int[ ] directCOL = {-1 ,  0 ,  1 , -1 , 1 , -1 , 0 , 1 } ;
-
-            for (int i = 0 ; i < 8 ; i++)  { // chek 8 ทิศรอบตัว
-                int nextR = TR + directROW[ i ] ;
-                int nextC = TC + directCOL[ i ] ;
-
-                if ( nextR >= 0 && nextR < R && nextC >= 0 && nextC < C ) {
-                    if (dashboard[ nextR ] [ nextC ] == '*') {
-                        count++;
-                    }
-                }
+        } 
+        else { //count mine near by.
+            bomb = 0;
+           /* 
+            * * *   1 2 3 
+            * x *   4 x 5
+            * * *   6 7 8
+                          */
+            if ( TRow - 1 >= 0 && TCol - 1 >= 0 ) {
+                if (dashboard[ TRow - 1 ] [ TCol - 1 ] == '*') bomb++; //บนซ้าย
             }
-            System.out.println("Near bomb :" + count);
+            if ( TRow - 1 >= 0 && TCol >= 0 && TCol < Col ) {
+                if (dashboard[ TRow - 1 ] [ TCol ] == '*') bomb++; //บนกลาง
+            }
+            if ( TRow - 1 >= 0 && TCol + 1 < Col ) {
+                if (dashboard[ TRow - 1 ] [ TCol + 1 ] == '*') bomb++; //บนขวา
+            }
+            if ( TRow - 1 >= 0 && TCol + 1 < Col ) {
+                if (dashboard[ TRow ] [ TCol - 1 ] == '*') bomb++; //ซ้าย
+            }
+            if ( TRow >= 0 && TRow < Row && TCol + 1 < Col ) {
+                if (dashboard[ TRow ] [ TCol + 1 ] == '*') bomb++; //ขวา
+            }
+            if ( TRow + 1 < Row && TCol - 1 >= 0 ) {
+                if (dashboard[ TRow + 1 ] [ TCol - 1 ] == '*') bomb++; //ล่างซ้าย
+            }
+            if ( TRow + 1 < Row && TCol >= 0 && TCol < Col ) {
+                if (dashboard[ TRow + 1] [ TCol ] == '*') bomb++; //ล่างกลาง
+            }
+            if ( TRow + 1 < Row && TCol + 1 < Col ) {
+                if (dashboard[ TRow + 1 ] [ TCol + 1 ] == '*') bomb++; //ล่างขวา
+            }
+            System.out.println(bomb); 
         }
-        // Close scanner
-        input.close() ;
+        
+
+        input.close() ;   
     }
+    
 }
+
