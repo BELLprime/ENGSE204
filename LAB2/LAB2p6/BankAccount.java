@@ -4,17 +4,16 @@ public class BankAccount {
     private String ownerName ;
     private double balance ;
 
-    //construc
+
     public BankAccount (String  ownerName , double initialBalance ) {
         this.ownerName = ownerName ;
         this.balance = initialBalance ;
     }
 
-    //met
-    public void deposit (double amount) {
+    public void deposit ( double amount ) {
         this.balance += amount ;
     }
-    //show
+
     public void displaySummary () {
         System.out.println("Owner: " + this.ownerName ) ;
         System.out.println("Balance: " + this.balance ) ;
