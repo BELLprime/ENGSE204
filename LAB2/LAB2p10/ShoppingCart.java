@@ -4,7 +4,6 @@ public class ShoppingCart {
     private Product [] items = new Product[10] ;
     private int itemCount = 0;
 
-    //method
     public void addProduct(Product p) {
         this.items [ itemCount ] = p ;
         itemCount ++ ;

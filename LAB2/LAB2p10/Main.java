@@ -11,9 +11,9 @@ public class Main {
         
         for (int i = 0 ; i < N ; i++) {
             input.nextLine() ; 
-            System.out.print("Name product : ") ;
+        
             String name = input.nextLine() ;
-            System.out.print("Price product: ") ;
+        
             Double price = input.nextDouble() ;
 
             Product p = new Product (name , price) ;
