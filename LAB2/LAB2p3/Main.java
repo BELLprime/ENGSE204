@@ -14,9 +14,9 @@ public class Main {
 
         for (int i = 0 ; i < N ; i++ ) {
         
-            System.out.printf("%s %d\t\t:" ,"Enter ID " , i+1) ;
+            System.out.printf("%s %d:" ,"Enter ID " , i+1) ;
             ID = input.nextLine() ; 
-            System.out.printf("%s %d\t:" ,"Enter Fullname ",i+1) ;
+            System.out.printf("%s %d:" ,"Enter Fullname ",i+1) ;
             Name = input.nextLine() ;
 
             System.out.println() ;
