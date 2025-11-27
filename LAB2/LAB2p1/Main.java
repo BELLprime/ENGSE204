@@ -8,14 +8,13 @@ public class Main {
         Scanner input = new Scanner(System.in) ; 
 
         //input
-        System.out.print("Enter ID       : ") ;
+        System.out.print("Enter ID: ") ;
         String ID = input.nextLine() ; 
-        System.out.print("Enter Fullname : ") ;
+        System.out.print("Enter Fullname: ") ;
         String Name = input.nextLine() ; 
 
         Student P1 = new Student(ID , Name) ; //create obj form class
 
-        System.out.println("------Display------ ") ;
         System.out.println( P1.getID() ) ;
         System.out.println( P1.getName() ) ;
 
