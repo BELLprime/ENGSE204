@@ -13,7 +13,6 @@ public class Main {
 
         Rectangle Rec = new Rectangle(W, H) ; 
         //display
-        System.out.println("-----display-----") ;
         System.out.println( Rec.getArea() ) ;
         System.out.println( Rec.getPerimeter ()) ;
 

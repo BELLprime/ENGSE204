@@ -14,7 +14,6 @@ public class Main {
         if (mode.equals("C_TO_F") ) result = TempConverter.celsiusToFahrenheit(temp) ;  
         else result = TempConverter.fahrenheitToCelsius(temp) ;
 
-        System.out.println("-----display-----") ;
         System.out.println(result) ;
     
         input.close() ;

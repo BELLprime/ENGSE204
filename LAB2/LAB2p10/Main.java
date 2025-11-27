@@ -10,17 +10,17 @@ public class Main {
         ShoppingCart cart = new ShoppingCart() ;
         
         for (int i = 0 ; i < N ; i++) {
-            input.nextLine() ; // clear buff
+            input.nextLine() ; 
             System.out.print("Name product : ") ;
             String name = input.nextLine() ;
             System.out.print("Price product: ") ;
             Double price = input.nextDouble() ;
 
-            Product p = new Product (name , price) ;//create obj construct
+            Product p = new Product (name , price) ;
             cart.addProduct( p ) ;
         }
         double result = cart.calculateTotalPrice() ;
-        System.out.println("-----display-----") ;
+
         System.out.println(result) ;
     
         input.close() ;

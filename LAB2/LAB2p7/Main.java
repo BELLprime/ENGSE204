@@ -17,8 +17,6 @@ public class Main {
 
         BankAccount Bank = new BankAccount(owner, initial) ;
 
-        //display
-        System.out.println("-----display-----") ;
         Bank.withdraw( withdrawA ) ;
         Bank.withdraw( withdrawB ) ;
         Bank.displayBalance() ;

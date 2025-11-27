@@ -16,7 +16,6 @@ public class Main {
         Car car = new Car(model, year) ;
         car.setYear(updateYear) ;
 
-        System.out.println("-----display-----") ; 
         System.out.println("Model: " + car.getModel() ) ; 
         System.out.println("Year: " + car.getYear() ) ; 
 

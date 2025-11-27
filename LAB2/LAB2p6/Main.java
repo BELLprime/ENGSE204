@@ -16,7 +16,6 @@ public class Main {
         BankAccount Bank = new BankAccount(owner, initial) ;
         Bank.deposit(deposit) ;
         //display
-        System.out.println("-----display-----") ;
         Bank.displaySummary();
 
         input.close() ;

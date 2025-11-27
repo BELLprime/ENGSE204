@@ -11,7 +11,6 @@ public class Main {
         int finalScore = input.nextInt() ;
 
         Student P1 = new Student(Name, midtermScore, finalScore) ;
-        System.out.println("-----display-----") ;
         P1.displaySummary() ;
 
         input.close() ;

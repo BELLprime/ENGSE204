@@ -16,7 +16,6 @@ public class Main {
         Course course = new Course( courseId , courseName ) ;
         Student student = new Student( studentName , course ) ;
 
-        System.out.println("-----display-----") ; 
         student.displayEnrollment() ;
 
         input.close() ; 

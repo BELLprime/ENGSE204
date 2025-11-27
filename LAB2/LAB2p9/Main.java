@@ -18,7 +18,6 @@ public class Main {
         Address address = new Address( street, City, Postal ) ;
         Student student = new Student( name , address ) ; 
 
-        System.out.println("-----display-----") ;
         student.displayProfile() ;
     
         input.close() ;
