@@ -6,14 +6,12 @@ public class Student {
     private int midtermScore ;
     private int finalScore ;
 
-    //Constructor 
     public Student(String name ,int midS , int finalS ) {
         this.name = name ;
         this.midtermScore = midS ;
         this.finalScore = finalS ;
     }
 
-    //Instance MET
     public double calculateAverage () {
         double result = (this.midtermScore +  this.finalScore) / (double) 2 ; 
         return result ;
