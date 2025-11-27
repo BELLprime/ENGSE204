@@ -19,7 +19,7 @@ public class Student {
 
     public void displaySummary () {
         System.out.println("Name: " + this.name) ;
-        System.out.println("Average Score: " + calculateAverage () ) ;
-        System.out.println("Status: " + ( ( calculateAverage () >= 50.0) ? "Pass" : "Fail")  ) ;
+        System.out.println("Average Score: " + calculateAverage ( ) ) ;
+        System.out.println("Status: " + ( ( calculateAverage () >= 50.0) ? "Pass" : "Fail") ) ;
     }
 }
