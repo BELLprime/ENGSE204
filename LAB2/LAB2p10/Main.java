@@ -13,7 +13,6 @@ public class Main {
             input.nextLine() ; 
         
             String name = input.nextLine() ;
-        
             Double price = input.nextDouble() ;
 
             Product p = new Product (name , price) ;

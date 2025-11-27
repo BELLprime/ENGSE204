@@ -2,12 +2,17 @@ package LAB2.LAB2p10;
 
 public class ShoppingCart {
     private Product [] items = new Product[10] ;
-    private int itemCount = 0;
+    private int itemCount = 0 ;
 
     public void addProduct(Product p) {
         this.items [ itemCount ] = p ;
         itemCount ++ ;
     } 
+
+    public int getitemcount ()  {
+        return this.itemCount ;
+    }
+
     public double calculateTotalPrice() {
         Double TotalPrice = 0.0 ;
 
