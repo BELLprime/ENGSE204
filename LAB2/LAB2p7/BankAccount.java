@@ -10,6 +10,10 @@ public class BankAccount {
         this.balance = initialBalance ;
     }
 
+    public String getOwnerName () {
+        return this.ownerName ;
+    }
+
     //met
     public void withdraw (double amount) {
         if (amount <= this.balance){

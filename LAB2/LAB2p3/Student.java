@@ -15,4 +15,10 @@ public class Student {
         studentCount++ ;
     }
     
+    public String getStudentId () {
+        return this.studentId ;
+    }
+    public String getName () {
+        return this.name ;
+    }
 }
