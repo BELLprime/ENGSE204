@@ -1,6 +1,6 @@
 package LAB2.LAB2p5;
 
-public class Rectangle {
+class Rectangle {
     public Double width ;
     public Double height ;
 

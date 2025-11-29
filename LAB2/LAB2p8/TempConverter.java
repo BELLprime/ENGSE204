@@ -1,6 +1,6 @@
 package LAB2.LAB2p8;
 
-public class TempConverter {
+class TempConverter {
     // Static met
     public static double celsiusToFahrenheit (double celsius) {
         return ( (celsius * 9.0 / 5.0) + 32 ) ;

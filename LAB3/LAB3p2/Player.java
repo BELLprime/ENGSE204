@@ -1,6 +1,6 @@
 package LAB3.LAB3p2;
 
-public class Player {
+class Player {
 
     private int score ;
 

@@ -1,6 +1,6 @@
 package LAB2.LAB2p4;
 
-public class Student {
+class Student {
     
     private String name ; 
     private int midtermScore ;

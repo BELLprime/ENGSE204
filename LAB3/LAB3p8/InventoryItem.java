@@ -1,6 +1,6 @@
 package LAB3.LAB3p8;
 
-public class InventoryItem {
+class InventoryItem {
     
     private String productName ;
     private int stock ;

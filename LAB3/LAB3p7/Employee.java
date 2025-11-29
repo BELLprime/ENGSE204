@@ -1,6 +1,6 @@
 package LAB3.LAB3p7;
 
-public class Employee {
+class Employee {
     
     private String employeeId ; 
     private String department ;

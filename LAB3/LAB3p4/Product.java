@@ -1,6 +1,6 @@
 package LAB3.LAB3p4;
 
-public class Product {
+class Product {
 
     private String name ;
     private static int productCount = 0 ;

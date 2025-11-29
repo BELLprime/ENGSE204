@@ -1,6 +1,6 @@
 package LAB2.LAB2p10;
 
-public class ShoppingCart {
+class ShoppingCart {
     private Product [] items = new Product[10] ;
     private int itemCount = 0 ;
 

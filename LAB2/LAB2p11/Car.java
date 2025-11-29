@@ -1,6 +1,6 @@
 package LAB2.LAB2p11;
 
-public class Car {
+class Car {
     //att
     private String model ;
     private int year ;

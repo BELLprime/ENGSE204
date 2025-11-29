@@ -1,6 +1,6 @@
 package LAB3.LAB3p1;
 
-public class User {
+class User {
 
     private String username ;
 

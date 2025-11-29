@@ -1,6 +1,6 @@
 package LAB3.LAB3p6;
 
-public class BankAccount {
+class BankAccount {
     private double balance ;
 
     public BankAccount(double initialBalance) {

@@ -1,6 +1,6 @@
 package LAB2.LAB2p9;
 
-public class Student {
+class Student {
     //Attribute
     private String name ;
     private Address address ; // Class-Attribute

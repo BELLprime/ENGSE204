@@ -1,6 +1,6 @@
 package LAB2.LAB2p6;
 
-public class BankAccount {
+class BankAccount {
     private String ownerName ;
     private double balance ;
 

@@ -1,6 +1,6 @@
 package LAB2.LAB2p10;
 
-public class Product {
+class Product {
     private String name ;
     private Double price ;
 

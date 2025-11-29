@@ -1,6 +1,6 @@
 package LAB2.LAB2p3;
 
-public class Student {
+class Student {
     //Ins attribute
     private String studentId ;
     private String name ;

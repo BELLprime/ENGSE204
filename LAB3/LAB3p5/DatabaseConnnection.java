@@ -1,6 +1,6 @@
 package LAB3.LAB3p5;
 
-public class DatabaseConnnection {
+class DatabaseConnnection {
 
     private String connectionString ;
     private boolean connected ;

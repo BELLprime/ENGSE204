@@ -1,6 +1,6 @@
 package LAB3.LAB3p3;
 
-public class User {
+class User {
     
     private String password ; 
 
