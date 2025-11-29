@@ -1,14 +1,11 @@
 package LAB3.LAB3p8;
 
 import java.util.Scanner ; 
-import java.util.ArrayList ;
 
 public class Main {
     public static void main( String [ ] args ) {
 
         Scanner input = new Scanner(System.in) ;
-        
-        ArrayList <String> listNotify = new ArrayList <> () ;
 
         String productName = input.nextLine() ;
         int initStock = input.nextInt() ;
@@ -29,12 +26,10 @@ public class Main {
                 try {
 
                     inventoryItem.addStock(amount) ;
-                    listNotify.add("Stock added.") ;
 
                 } catch ( IllegalArgumentException e ) {
 
-                    System.out.println(  ) ;
-                    listNotify.add( e.getMessage() ) ;
+                    System.out.println( e.getMessage() ) ;
 
                 }
 
@@ -45,11 +40,11 @@ public class Main {
                 try {
 
                     inventoryItem.sellStock(amount) ;
-                    listNotify.add( "Sale successful." ) ;
+                    System.out.println( "Sale successful." ) ;
 
                 } catch ( IllegalArgumentException e ) {
 
-                    listNotify.add( e.getMessage() ) ;
+                    System.out.println( e.getMessage() ) ;
 
                 }
             } else {
@@ -59,11 +54,6 @@ public class Main {
             }
         } 
 
-        for  (int i = 0 ; i < listNotify.size() ; i ++ ) {
-            
-            System.out.println( listNotify.get( i ) ) ;
-
-        }
         System.out.println( "Final Stock: " + inventoryItem.getStock() ) ;
 
         input.close () ; 

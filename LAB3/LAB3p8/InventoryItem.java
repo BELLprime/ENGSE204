@@ -31,7 +31,7 @@ class InventoryItem {
         if (amount > 0) {
 
             this.stock += amount ;
-
+            System.out.println("Stock added.") ;
         } else {
 
             throw new IllegalArgumentException("Invalid amount.") ;
