@@ -26,11 +26,6 @@ class User {
         return this.password ;
     }
 
-    public String getName() {
-        
-        return this.username ;
-    }
-
     public void setPassword(String newPassword) {
         if ( newPassword.length() >= minPasswordLength ) {
 

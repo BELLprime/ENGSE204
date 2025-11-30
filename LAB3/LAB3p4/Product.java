@@ -14,12 +14,6 @@ class Product {
 
     }
 
-    public String getName () {
-        
-        return this.name ;
-
-    } 
-
     public static int getProductCount () {
 
         return productCount ;
