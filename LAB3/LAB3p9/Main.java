@@ -24,9 +24,9 @@ public class Main {
             System.out.println( e.getMessage() ) ;
         }
 
-        User user1 = new User( user1_name, user1_pass ) ;
+        User user1 = new User( user1_name , user1_pass ) ;
         
-        User user2 = new User( user2_name, user2_pass ) ;
+        User user2 = new User( user2_name , user2_pass ) ;
 
         try {
             User.setMinLength( minLength2 ) ;
@@ -35,7 +35,7 @@ public class Main {
         }
 
         try {
-            user2.setPassword(user2_newPass) ;
+            user2.setPassword( user2_newPass ) ;
         } catch ( IllegalArgumentException e ) {
             System.out.println( e.getMessage() ) ;
         }
