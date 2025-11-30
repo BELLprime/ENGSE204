@@ -26,6 +26,7 @@ class User {
         return this.password ;
     }
 
+
     public void setPassword(String newPassword) {
         if ( newPassword.length() >= minPasswordLength ) {
 
