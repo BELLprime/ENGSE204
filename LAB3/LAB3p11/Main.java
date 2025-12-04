@@ -15,6 +15,7 @@ public class Main {
             if ( mode.trim().toUpperCase().equals("SET_URL") )  {
                 String URL = input.nextLine() ;
                 SystemConfig config = SystemConfig.getInstance() ; //use static getInstance 
+                //protect error
                 try {
                      config.setServerUrl( URL ) ; ;
                 } catch (IllegalArgumentException e) {
