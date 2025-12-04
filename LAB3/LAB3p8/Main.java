@@ -7,9 +7,6 @@ public class Main {
     public static void main( String [ ] args ) {
 
         Scanner input = new Scanner(System.in) ;
-        //add on
-        ArrayList <String> listNotify = new ArrayList <> () ;
-
         String productName = input.nextLine() ;
         int initStock = input.nextInt() ;
         //obj
@@ -27,10 +24,8 @@ public class Main {
                 int amount = input.nextInt() ;
                 try {
                     inventoryItem.addStock(amount) ;
-                    listNotify.add("Stock added.") ;
                 } catch ( IllegalArgumentException e ) {
-                    System.out.println(  ) ;
-                    listNotify.add( e.getMessage() ) ;
+                    System.out.println( e.getMessage() ) ;
                 }
 
             } else if (mode.equals("SELL") ) {
@@ -38,19 +33,14 @@ public class Main {
                 int amount = input.nextInt() ;
                 try {
                     inventoryItem.sellStock(amount) ;
-                    listNotify.add( "Sale successful." ) ;
                 } catch ( IllegalArgumentException e ) {
-                    listNotify.add( e.getMessage() ) ;
+                    System.out.println( e.getMessage() ) ;
                 }
-
-            } else {
+            } 
+            else {
                 System.out.println( "Invalid Mode." ) ;
             }
         } 
-        //print ให้ดูสวย แค่ลอง
-        for  (int i = 0 ; i < listNotify.size() ; i ++ ) {
-            System.out.println( listNotify.get( i ) ) ;
-        }
         System.out.println( "Final Stock: " + inventoryItem.getStock() ) ;
 
         input.close () ; 
