@@ -12,7 +12,7 @@ public class Main {
         double taxRate = input.nextDouble() ;
         double raiseAmount = input.nextDouble() ;
 
-        Employee employee = new Employee( name, monthlySalary ) ;
+        Employee employee = new Employee( name, monthlySalary ) ; //obj
 
         System.out.printf( "Tax (Before): %.1f\n" , employee.calculateTax(taxRate) ) ;
 
@@ -21,9 +21,7 @@ public class Main {
         } catch (Exception e) {
             System.out.println( e.getMessage() ) ;
         }
-        
         System.out.printf( "Tax (After): %.1f\n" , employee.calculateTax(taxRate) ) ;
-
         input.close () ; 
     }
 }
