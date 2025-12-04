@@ -19,21 +19,14 @@ class User {
     public void setPassword (String newPassword ) {
 
         String removeSP = newPassword.trim() ;
-
+        //case
         if (removeSP.length() >= 8 ) {
-
             this.password = removeSP ;
-
             System.out.println("\nPassword updated.");
-        
         } else if (removeSP.contains(" ")) {
-
             throw new IllegalArgumentException("Don't contain spaces!!!!!.") ;
-        
         } else {
-
             throw new IllegalArgumentException("Password is too short.") ;
-        
         }
 
     }

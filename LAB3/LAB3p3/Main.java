@@ -9,7 +9,7 @@ public class Main {
 
         String initPass = input.nextLine() ;
         String newPass = input.nextLine() ;
-
+        //obj
         User user = new User( initPass ) ;
         // check
         try {
