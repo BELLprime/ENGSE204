@@ -19,30 +19,29 @@ public class Main {
             input.nextLine() ;
             String mode = input.nextLine().trim() ;
 
-            if (mode.equals("ADD") ) {
-
-                int amount = input.nextInt() ;
-                try {
-                    inventoryItem.addStock(amount) ;
-                } catch ( IllegalArgumentException e ) {
-                    System.out.println( e.getMessage() ) ;
-                }
-
-            } else if (mode.equals("SELL") ) {
-
-                int amount = input.nextInt() ;
-                try {
-                    inventoryItem.sellStock(amount) ;
-                } catch ( IllegalArgumentException e ) {
-                    System.out.println( e.getMessage() ) ;
-                }
-            } 
-            else {
-                System.out.println( "Invalid Mode." ) ;
-            }
+            int amount = input.nextInt() ;
+            processCommand( inventoryItem , mode , amount ) ;
+             
         } 
         System.out.println( "Final Stock: " + inventoryItem.getStock() ) ;
-
         input.close () ; 
+        //end main program
+    }
+    //funtion
+    private static void processCommand(InventoryItem item, String mode, int amount) {
+        try {
+            switch (mode) {
+                case "ADD":
+                    item.addStock( amount ) ;
+                    break;
+                case "SELL":
+                    item.sellStock( amount ) ;
+                    break;
+                default:
+                    System.out.println("Invalid Mode.");
+            }
+        } catch (IllegalArgumentException e ) {
+            System.out.println( e.getMessage() ) ;
+        }
     }
 }
