@@ -11,12 +11,13 @@ public class Main {
         String newPass = input.nextLine() ;
 
         User user = new User( initPass ) ;
-
+        // check
         try {
             user.setPassword( newPass ) ;
             System.out.print( user.getPassword() ) ;
         } catch (IllegalArgumentException e) {
             System.out.println("\n" + e.getMessage()) ;
+            System.out.println( initPass ) ;
         }
 
         input.close () ; 
