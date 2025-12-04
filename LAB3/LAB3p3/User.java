@@ -22,7 +22,10 @@ class User {
         //case
         if (removeSP.length() >= 8 ) {
             this.password = removeSP ;
-            System.out.println("\nPassword updated.");
+            System.out.println("\nPassword updated.") ;
+        if (newPassword == null || newPassword.isEmpty()) {
+            throw new IllegalArgumentException("Password cannot be null or empty") ;
+        }
         } else if (removeSP.contains(" ")) {
             throw new IllegalArgumentException("Don't contain spaces!!!!!.") ;
         } else {
