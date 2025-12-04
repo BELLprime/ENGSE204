@@ -11,11 +11,8 @@ public class Main {
         double monthlySalary = input.nextDouble() ;
         double taxRate = input.nextDouble() ;
         double raiseAmount = input.nextDouble() ;
-
         Employee employee = new Employee( name, monthlySalary ) ; //obj
-
         System.out.printf( "Tax (Before): %.1f\n" , employee.calculateTax(taxRate) ) ;
-
         try {
             employee.giveRaise(raiseAmount) ;
         } catch (Exception e) {

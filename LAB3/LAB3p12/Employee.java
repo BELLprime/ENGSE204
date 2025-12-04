@@ -1,5 +1,4 @@
 package LAB3.LAB3p12;
-
 class Employee {
 
     private String name ;
@@ -14,11 +13,9 @@ class Employee {
             this.monthlySalary = 0.0 ;
         }
     }
-
     public String getName() {
         return this.name ;
     }
-
     public void giveRaise (double amount) {
         if ( amount > 0 ) {
             this.monthlySalary += amount ;
@@ -27,11 +24,9 @@ class Employee {
             throw new IllegalArgumentException( "Invalid amount.") ;
         }
     }
-
     private double getAnnualSalary() {
         return this.monthlySalary * 12 ;
     }
-
     public double calculateTax(double taxRate) {   
         return getAnnualSalary() * taxRate ;
     }
