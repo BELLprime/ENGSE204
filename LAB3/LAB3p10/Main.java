@@ -13,21 +13,21 @@ public class Main {
             
             String order = input.nextLine() ;
             if ( order.trim().toUpperCase().equals("SET") ) {
-                int Log = input.nextInt() ;
+                int logLevel = input.nextInt() ;
                 input.nextLine() ;
                 //protect error
                 try {
-                    SystemLogger.setLogLevel( Log ) ;
+                    SystemLogger.setLogLevel( logLevel ) ;
                 } catch ( IllegalArgumentException e ) {
                     System.out.println( e.getMessage() ) ;
                 }
             } 
             else if ( order.trim().toUpperCase().equals("LOG") ) {
-                int Log = input.nextInt() ;
+                int logLevel = input.nextInt() ;
                 input.nextLine() ;
 
                 String message = input.nextLine() ;
-                SystemLogger.log(Log, message) ;
+                SystemLogger.log(logLevel , message) ;
             }
         }
         input.close () ; 

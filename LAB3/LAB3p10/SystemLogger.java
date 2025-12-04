@@ -1,17 +1,20 @@
 package LAB3.LAB3p10;
 
 class SystemLogger {
-    
-    private static int currentLogLevel = 1 ;
+
+    private static final int INFO = 1;
+    private static final int DEBUG = 2;
+    private static final int ERROR = 3;
+    private static int currentLogLevel = INFO ;
 
     private static String getLevelName ( int Level ) {
-        if ( Level == 1 ) {
+        if ( Level == INFO ) {
             return "INFO" ;
         }
-        else if ( Level == 2 ) {
+        else if ( Level == DEBUG ) {
             return "DEBUG" ;
         }
-        else if ( Level == 3 ) {
+        else if ( Level == ERROR ) {
             return "ERROR" ;
         }
         else {
@@ -20,7 +23,7 @@ class SystemLogger {
     }
 
     public static void setLogLevel( int newLevel ) {
-        if ( newLevel >=1 && newLevel <= 3 ) {
+        if ( newLevel >= INFO && newLevel <= ERROR ) {
             currentLogLevel = newLevel ;
             System.out.println ("Log level set to " + getLevelName(currentLogLevel) ) ;
         } else {
