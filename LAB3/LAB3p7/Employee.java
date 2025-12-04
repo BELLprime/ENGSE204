@@ -4,30 +4,26 @@ class Employee {
     
     private String employeeId ; 
     private String department ;
-
+    //con
     public Employee(String employeeId ,String department ) {
-
         this.employeeId = employeeId ;
-        this.department = department ;
-        
+        this.department = department ;  
     }
-
-    public String getEmployeeeId() {
-        
+    //read
+    public String getEmployeeeId() {   
         return this.employeeId ;
-
     }
-
+    //read
     public String getDepartment() {
-        
         return this.department ;
-        
     }
-
+    //set
     public void setDepartment(String newDepartment) {
-       
-        this.department = newDepartment ;
-        
+        if (newDepartment == null || newDepartment.isEmpty()) {
+            throw new IllegalArgumentException("Student ID cannot be null or empty");
+        } else {
+            this.department = newDepartment ;
+        }
     }
 
 }

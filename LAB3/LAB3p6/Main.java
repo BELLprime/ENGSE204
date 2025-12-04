@@ -11,16 +11,16 @@ public class Main {
         double deposit = input.nextDouble() ;
         double withdraw = input.nextDouble() ;
 
-        input.nextLine() ;
+        input.nextLine() ; //clear buff after double
 
-        BankAccount bank = new BankAccount(initBalance) ;
-
+        BankAccount bank = new BankAccount(initBalance) ;  // obj
+        //check case
         try {
             bank.deposit(deposit) ;
         } catch (IllegalArgumentException e){
             System.out.println( e.getMessage() ) ;
         }
-
+        //check case
         try {
             bank.withdraw(withdraw) ;
         } catch (IllegalArgumentException e){
