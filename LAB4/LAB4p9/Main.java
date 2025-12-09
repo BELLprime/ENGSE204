@@ -22,6 +22,8 @@ public class Main {
             acc3.displayInfo() ;
         } catch (IllegalArgumentException e) {
             System.out.println( e.getMessage() ) ;
+        } catch (Exception e) { // ดักทุกอย่าง
+            System.out.println("Something went wrong! (Maybe wrong input?).") ;
         } finally {
             sc.close() ;
         }
