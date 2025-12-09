@@ -5,21 +5,25 @@ public class Main {
     public static void main(String [ ] args) {
         Scanner sc = new Scanner(System.in) ;
         //input
-        String ID = sc.nextLine() ;
-        double initBalance = sc.nextDouble() ;
-        sc.nextLine () ;
-        double deposit = sc.nextDouble() ;
-        sc.nextLine () ;
-        double withdraw = sc.nextDouble() ;
-        sc.nextLine () ;
-        //create obj 
-        ImnutableAccount acc1 = new ImnutableAccount(ID, initBalance) ;
-        ImnutableAccount acc2 = acc1.deposit(deposit) ;
-        ImnutableAccount acc3 = acc2.withdraw(withdraw) ;
-        //display
-        acc1.displayInfo() ;
-        acc3.displayInfo() ;
-
-        sc.close() ;
+        try {
+            String ID = sc.nextLine() ;
+            double initBalance = sc.nextDouble() ;
+            sc.nextLine () ;
+            double deposit = sc.nextDouble() ;
+            sc.nextLine () ;
+            double withdraw = sc.nextDouble() ;
+            sc.nextLine () ;
+            //create obj 
+            ImnutableAccount acc1 = new ImnutableAccount(ID, initBalance) ;
+            ImnutableAccount acc2 = acc1.deposit(deposit) ;
+            ImnutableAccount acc3 = acc2.withdraw(withdraw) ;
+            //display
+            acc1.displayInfo() ;
+            acc3.displayInfo() ;
+        } catch (IllegalArgumentException e) {
+            System.out.println( e.getMessage() ) ;
+        } finally {
+            sc.close() ;
+        }
     }
 }
