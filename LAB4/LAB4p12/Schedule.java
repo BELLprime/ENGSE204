@@ -14,6 +14,9 @@ class Schedule { //Mutable Component
     }
     //copy con
     public Schedule (Schedule other) {
+        if (other == null) {
+            throw new IllegalArgumentException("other ScoreBoard cannot be null");
+        }
         this.hour = other.hour ;
     }
 }

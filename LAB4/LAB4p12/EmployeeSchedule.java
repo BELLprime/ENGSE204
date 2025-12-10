@@ -10,6 +10,9 @@ class EmployeeSchedule {
     }
     //copy con
     public EmployeeSchedule (EmployeeSchedule other) {
+        if (other == null) {
+            throw new IllegalArgumentException("other ScoreBoard cannot be null");
+        }
         this.name = other.name ; //copy name โดย shallow copy
         this.schedule = new Schedule(other.schedule.getHour() ) ; //deep copy
     }

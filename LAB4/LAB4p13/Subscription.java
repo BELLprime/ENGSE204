@@ -21,6 +21,9 @@ class Subscription {
     }
     //copy construct
     public Subscription (Subscription other ) {
+        if (other == null) {
+            throw new IllegalArgumentException("other ScoreBoard cannot be null");
+        }
         this.planName = other.planName ;
         this.durationDays = other.durationDays ;
     }
