@@ -24,10 +24,8 @@ class Movie {
 
         if ( this.rating > 10.0 ) {
             this.rating = 10.0 ;
-        } else if ( this.rating < 0.0 ) {
+        } else { 
             this.rating = 0.0 ;
-        } else {
-            throw new IllegalArgumentException("Error : Rating must be numberic only! ") ;
         }
     }   
     public void displayDetails () {
