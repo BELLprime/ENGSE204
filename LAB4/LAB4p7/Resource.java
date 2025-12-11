@@ -13,7 +13,6 @@ class Resource {
 
     @Override
     protected void finalize () throws Throwable{
-        
         System.out.println("Resouce " + this.id +" finalized (destroyed.)" ) ;
         super.finalize() ;
     }

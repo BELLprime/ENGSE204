@@ -18,7 +18,7 @@ public class Main {
         System.gc() ;
         r3 = null ;
         System.gc() ;
-        
+    
         input.close() ;
     }
 }

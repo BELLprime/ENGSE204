@@ -14,9 +14,9 @@ public class Main {
             double withdraw = sc.nextDouble() ;
             sc.nextLine () ;
             //create obj 
-            ImnutableAccount acc1 = new ImnutableAccount(ID, initBalance) ;
-            ImnutableAccount acc2 = acc1.deposit(deposit) ;
-            ImnutableAccount acc3 = acc2.withdraw(withdraw) ;
+            ImmutableAccount acc1 = new ImmutableAccount(ID, initBalance) ;
+            ImmutableAccount acc2 = acc1.deposit(deposit) ;
+            ImmutableAccount acc3 = acc2.withdraw(withdraw) ;
             //display
             acc1.displayInfo() ;
             acc3.displayInfo() ;
