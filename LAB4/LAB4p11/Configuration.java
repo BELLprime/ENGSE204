@@ -4,12 +4,10 @@ class Configuration {
     private final String theme ;
     private final int fontSize ;
     private final boolean darkMode ;
-    //main con
     public Configuration(String theme , int fontSize ,boolean darkMode) { 
         if (theme == null || theme.isEmpty()) {
             throw new IllegalArgumentException("Theme can't be null or empty.") ;
         }
-        //validation fontsize 
         if (fontSize < 10) {
             this.fontSize = 10 ;
         } else if (fontSize > 20) {

@@ -61,8 +61,7 @@ class AuditRecord {
         } 
     }
     public void displayLog() {
-        System.out.print("User:" + this.user + ",Logs:" + this.logMessages.length ) ;
-        System.out.print("[") ;
+        System.out.print("User:" + this.user + ",Logs:" + this.logMessages.length + "[") ;
         for (int i = 0 ; i < this.logMessages.length ; i++ ) {
             System.out.print( this.logMessages[i] ) ;
 

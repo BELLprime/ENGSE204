@@ -6,7 +6,6 @@ public class Main {
         Scanner sc = new Scanner(System.in) ;
 
         try {
-            //input
             String BaseTheme = sc.nextLine() ;
             int BaseFontsize = sc.nextInt() ;
             sc.nextLine() ;
@@ -17,15 +16,15 @@ public class Main {
             sc.nextLine() ;
             boolean UserDarkmode = sc.nextBoolean() ;
             sc.nextLine() ;
-            //merge process
+            
             Configuration baseConfig = new Configuration(BaseTheme, BaseFontsize ,BaseDarkmode) ;
             Configuration userConfig = new Configuration(UserTheme, UserFontsize ,UserDarkmode) ;
             Configuration finalConfig = new Configuration(baseConfig, userConfig) ;
-            //display
+            
             finalConfig.displaySettings();
         } catch (IllegalArgumentException e) {
             System.out.println( e.getMessage() ) ;
-        } catch (Exception e) { // ดักทุกอย่าง
+        } catch (Exception e) { 
             System.out.println("Something went wrong! (Maybe wrong input?).") ;
         } finally {
             sc.close() ;
