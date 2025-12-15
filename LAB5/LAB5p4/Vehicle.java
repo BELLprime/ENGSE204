@@ -3,7 +3,7 @@ package LAB5.LAB5p4;
 class Vehicle {
     protected String color ;
 
-    public Vehicle (String clor) {
+    public Vehicle (String color) {
         this.color = color ;
     }
 }
