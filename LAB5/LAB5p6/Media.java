@@ -1,4 +1,4 @@
-package LAB5.LAB5p6;
+package LAB5p6;
 //Superclass
 class Media {
     protected String title ;

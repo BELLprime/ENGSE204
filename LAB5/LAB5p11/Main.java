@@ -1,4 +1,4 @@
-package LAB5.LAB5p11;
+package LAB5p11;
 
 import java.util.Scanner ;
 public class Main {

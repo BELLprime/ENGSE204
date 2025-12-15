@@ -1,4 +1,4 @@
-package LAB5.LAB5p4;
+package LAB5p4;
 //Superclass
 class Vehicle {
     protected String color ;

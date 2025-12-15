@@ -1,4 +1,4 @@
-package LAB5.LAB5p9;
+package LAB5p9;
 //Superclass
 class Item {
     protected String name ;

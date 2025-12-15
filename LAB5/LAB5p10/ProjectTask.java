@@ -1,4 +1,4 @@
-package LAB5.LAB5p10;
+package LAB5p10;
 //Superclass
 class ProjectTask {
     protected String description ;

@@ -1,4 +1,4 @@
-package LAB5.LAB5p12;
+package LAB5p12;
 //Super class
 class Service {
     protected String name ;

@@ -1,4 +1,4 @@
-package LAB5.LAB5p5;
+package LAB5p5;
 //Superclass
 class Shape {
     protected String name ;

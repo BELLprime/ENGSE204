@@ -1,4 +1,4 @@
-package LAB5.LAB5p8;
+package LAB5p8;
 //Superclass
 class Person {
     protected String name ;
