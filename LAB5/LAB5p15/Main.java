@@ -27,6 +27,6 @@ public class Main {
         }
         System.out.println( Total_Rental_Fee ) ;
 
-        input.close() ;
+        input.close() ; //close 
     }
 }
