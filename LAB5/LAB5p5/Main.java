@@ -5,11 +5,11 @@ public class Main {
     public static void main(String [ ] args) {
         Scanner input = new Scanner(System.in) ;
 
-        System.out.print("Enter Radius of Circle    :" ) ;
+        System.out.print("Enter Radius of Circle   :" ) ;
         double radius = input.nextDouble() ;
-        System.out.print("Enter Width of Rectangle  :" ) ;
+        System.out.print("Enter Width of Rectangle :" ) ;
         double width = input.nextDouble() ;
-        System.out.print("Enter Height of Rectangle :" ) ;
+        System.out.print("Enter Height of Rectangle:" ) ;
         double height = input.nextDouble() ;
         
         Circle circle = new Circle(null, radius) ;
