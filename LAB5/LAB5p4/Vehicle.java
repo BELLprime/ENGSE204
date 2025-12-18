@@ -6,6 +6,10 @@ class Vehicle {
     public Vehicle (String color) {
         this.color = color ;
     }
+    //get
+    public String getColor () {
+        return this.color ;
+    }
 }
 //Subclass
 class Car extends Vehicle {
@@ -13,10 +17,18 @@ class Car extends Vehicle {
     
     public Car(String color , int wheels ) {
         super(color) ;
-        this.wheels = wheels ;
+        setWheels(wheels); ;
     }
 
     public void displayDetails() {
-        System.out.println("Color:" + this.color + ", Wheels:" + this.wheels ) ;
+        System.out.println("Color:" + getColor() + ", Wheels:" + getWheels() ) ;
+    }
+    //setter
+    public void setWheels (int wheels) {
+        this.wheels = wheels ;
+    }
+    //getter 
+    public int getWheels () {
+        return this.wheels ;
     }
 }
